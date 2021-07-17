@@ -2,6 +2,14 @@
 
 In this project, I'm going to create an Amazon create account form using react
 
+## Screenshot
+
+![amazon](https://user-images.githubusercontent.com/49276315/126050851-e21d4de9-e77a-4539-ac2f-d72aa1d9bfe1.png)
+
+## Live Demo
+
+[Click here](amazon-create-account.netlify.app/)
+
 ## Built With
 
 Reacjs

@@ -1,8 +1,9 @@
 import './App.css';
+import Registration from './components/Registration';
 
 const App = () =>  (
   <div className="App">
-    <h1>Welcome to Amazon</h1>
+    <Registration />
   </div>
 );
 

@@ -1,8 +1,7 @@
-import './App.css';
 import Registration from './components/Registration';
 
 const App = () =>  (
-  <div className="App">
+  <div>
     <Registration />
   </div>
 );

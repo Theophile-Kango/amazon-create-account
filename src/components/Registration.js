@@ -1,6 +1,9 @@
-import React, {useState} from 'react'
-import amazon from './../images/amazon.png'
-import passwordCheck from './../helpers/passwordCheck'
+import React, {useState} from 'react';
+import amazon from './../images/amazon.png';
+import passwordCheck from './../helpers/passwordCheck';
+import Valid from './Valid';
+import Error from './Error';
+import styles from './../App.module.scss';
 
 const Registration = () => {
     const initialValues = {
@@ -11,7 +14,7 @@ const Registration = () => {
     }
     
     const [state, setState] = useState(initialValues);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isValid, setIsValid] = useState(null);
 
     const { password1, password2, name, email } = state;
     
@@ -26,22 +29,21 @@ const Registration = () => {
     const submit = e => {
         e.preventDefault();
         if(passwordCheck(password1,password2)){
-            setIsSubmitted(true)
+            setIsValid(true);
+        }else{
+            setIsValid(false);
         }
     }
 
     return (
-        <div>
+        <div className={styles.app}>
             <header>
                 <img src={amazon} alt="Amazon" />
             </header>
+            {isValid && (<Valid name={name} email={email} password={password1} />)}
+            { isValid == false && (<Error password1={password1} password2={password2} />)}
             <form onSubmit={submit}>
                 <h2>Create account</h2>
-                <div className="isSubmitted">
-                    <p>Name : <span>{name}</span></p>
-                    <p>Email: <span>{email}</span></p>
-                    <p>Password: <span>{password1}</span></p>
-                </div>
                 <div>
                     <label>Your name</label>
                     <input 

@@ -8,7 +8,8 @@ In this project, I'm going to create an Amazon create account form using react
 
 ## Live Demo
 
-[Click here](https://amazon-create-account.netlify.app/)
+
+[Click here](https://create-new-account.netlify.app/)
 
 ## Built With
 
